@@ -9,7 +9,7 @@ const baseConf = (_path) => {
     // and add path and name to entry array
     const VENDORS_NAME = 'vendors';
     const entry = {
-        index: ['babel-polyfill', './src/index/index.js']
+        index: ['babel-polyfill', './src/index/index.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
@@ -21,7 +21,7 @@ const baseConf = (_path) => {
             filename: `./${name}.html`,
         }));
         acc.push(new ExtractTextPlugin({
-            filename: `styles/[name].css`,
+            filename: `[name].css`,
             allChunks: false
         }));
 
@@ -45,7 +45,7 @@ const baseConf = (_path) => {
     return {
         entry,
         output: {
-            filename: 'js/[name].js',
+            filename: '[name].js',
         },
         module: {
             rules: [
