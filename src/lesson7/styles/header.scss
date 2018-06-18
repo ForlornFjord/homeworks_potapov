@@ -1,0 +1,65 @@
+@import "./variables.scss";
+@import "mixins";
+
+$navbar-height: 58px;
+$page-nav-item-margin: 36px;
+$page-nav-link-color: #ffffff;
+$logo-font-size: 26px;
+
+
+
+.page-header {
+  background-color: $background-dark;
+}
+
+.page-nav {
+  @include pageContainer;
+  display: flex;
+  justify-content: space-between;
+  height: $navbar-height;
+  &__logo {
+    @include flexCenterVertical;
+    color: $page-nav-link-color;
+    font-size: $logo-font-size;
+    font-weight: normal;
+  }
+  &__toggle {
+    display: none;
+  }
+  &__menu {
+    @include flexCenterVertical;
+  }
+  &__item {
+    margin: 0 $page-nav-item-margin;
+    display: flex;
+  }
+  &__link {
+    color: $page-nav-link-color;
+    @include flexCenterVertical;
+    justify-content: center;
+  }
+}
+
+.account-panel {
+  @include flexCenterVertical;
+  &__btn {
+    margin: 0;
+  }
+}
+
+.banner {
+  @include pageContainer;
+  display: flex;
+  justify-content: space-between;
+  &__img {
+    width: 463px;
+    height: 792px;
+    background-image: url("../../assets/images/artboard.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__info {
+
+  }
+}
