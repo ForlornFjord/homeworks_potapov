@@ -11,7 +11,7 @@ const baseConf = (_path) => {
     const entry = {
         lesson7: ['babel-polyfill', './src/lesson7/lesson7.js'],
         index: ['babel-polyfill', './src/index/index.js'],
-        hw_lesson_6: ['babel-polyfill', './src/hw_lesson_6/hw_lesson_6'],
+        hw_lesson_6: ['babel-polyfill', './src/hw_lesson_6/hw_lesson_6.js'],
         // index: ['babel-polyfill', './src/index/index.js'],
     };
 

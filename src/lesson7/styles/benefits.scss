@@ -1,0 +1,38 @@
+@import "variables";
+
+.benefits {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 1256px;
+  height: 420px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 66px;
+  &__item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    margin-top: 26px;
+    font-size: $base-font-size*1.125;
+    color: $dark-header-text-color;
+  }
+  &__line {
+    margin-top: 28px;
+    border: solid;
+    width: 60px;
+    height: 4px;
+    color: $seaweed-color;
+  }
+  &__text {
+    margin-top: 18px;
+    font-size: $base-font-size;
+    color: $dark-simple-text-color;
+    line-height: 2;
+  }
+}

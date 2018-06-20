@@ -1,10 +1,6 @@
 @import "./variables.scss";
 @import "mixins";
 
-$navbar-height: 58px;
-$page-nav-item-margin: 36px;
-$page-nav-link-color: #ffffff;
-$logo-font-size: 26px;
 
 
 
@@ -21,7 +17,6 @@ $logo-font-size: 26px;
     @include flexCenterVertical;
     color: $page-nav-link-color;
     font-size: $logo-font-size;
-    font-weight: normal;
   }
   &__toggle {
     display: none;
@@ -44,6 +39,8 @@ $logo-font-size: 26px;
   @include flexCenterVertical;
   &__btn {
     margin: 0;
+    padding: $base-font-size*0.6875 1.875*$base-font-size;
+    font-size: $base-font-size;
   }
 }
 
@@ -60,6 +57,23 @@ $logo-font-size: 26px;
     background-size: contain;
   }
   &__info {
-
+    padding: 146px 150px 0 0;
+  }
+  &__header {
+    font-size: $base-font-size*3;
+    color: $btn-default-font-color;
+    width: 70%;
+  }
+  &__text {
+    font-size: $base-font-size;
+    color: $btn-default-font-color;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    line-height: 2;
+    width: 80%;
+  }
+  &__btn {
+    font-size: $base-font-size*1.125;
+    padding: $base-font-size*1.25 3.375*$base-font-size;
   }
 }
