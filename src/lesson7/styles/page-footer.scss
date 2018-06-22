@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixins";
+
+.page-footer {
+  margin-top: 200px;
+  @include flexCenterVertical;
+  flex-direction: column;
+  &__title {
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    color: $dark-header-text-color;
+  }
+  &__logos {
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > a {
+      margin: 2*$base-font-size;
+    }
+  }
+  &__rights {
+    color: $dark-simple-text-color;
+    line-height: 2;
+    font-size: $base-font-size;
+    margin-bottom: 50px;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__menu-item {
+    margin: $base-font-size;
+    color: $dark-simple-text-color;
+    line-height: 2;
+    font-size: $base-font-size;
+  }
+  &__link-title {
+    color: $dark-simple-text-color;
+    line-height: 2;
+    font-size: $base-font-size;
+  }
+}

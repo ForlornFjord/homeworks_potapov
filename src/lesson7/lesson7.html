@@ -9,10 +9,12 @@
 </head>
 <body>
 <div class="page-wrapper">
-    <header class="page-header">
+    <header class="page-header page-nav_expand">
         <nav class="page-nav">
-            <h1 class="page-nav__logo">
-                <span><a href="http://localhost:8080">autocryp</a></span>
+            <h1>
+                <span>
+                    <a class="page-nav__logo" href="http://localhost:8080">autocryp</a>
+                </span>
             </h1>
             <button class="page-nav__toggle"></button>
             <ul class="page-nav__menu">
@@ -56,7 +58,9 @@
                 <div class="banner__text">Autocryp is the place to buy and sell bitcoin, Ethereum and various kinds of Digital Assets in Indonesia. Then, book your weekly, bi-weekly or one off clean online with imminent confirmation.</div>
                 <button class="banner__btn btn btn_success">Get Started</button>
             </div>
-            <figure class="banner__img"></figure>
+            <figure class="banner__img">
+                <!--<img src="../../assets/images/a" alt="">-->
+            </figure>
         </div>
     </header>
     <section class="benefits">
@@ -135,10 +139,9 @@
             <figure class="quotes__hook"></figure>
         </div>
         <h1 class="quotes__header">What customers Say</h1>
-        <div action="" class="quotes__comments">
+        <div class="quotes__comments">
             <form class="comments__items">
-                <input class="comments__radio-btn" id="comments__item1" type="radio" checked="checked" name="radio">
-                <label class="comments__item" for="comments__item1">
+                <div class="comments__item">
                     <div class="comments__hooks">
                         <figure class="comments__hook"></figure>
                         <figure class="comments__hook"></figure>
@@ -148,9 +151,8 @@
                         <div>Brandon Roger /</div>
                         <div class="comments__company">OWW Studio</div>
                     </div>
-                </label>
-                <input class="comments__radio-btn" id="comments__item2" type="radio" name="radio">
-                <label class="comments__item" for="comments__item2">
+                </div>
+                <div class="comments__item">
                     <div class="comments__hooks">
                         <figure class="comments__hook"></figure>
                         <figure class="comments__hook"></figure>
@@ -160,9 +162,8 @@
                         <div>Sean Walker /</div>
                         <div class="comments__company">OWW Studio</div>
                     </div>
-                </label>
-                <input class="comments__radio-btn" id="comments__item3" type="radio" name="radio">
-                <label class="comments__item" for="comments__item3">
+                </div>
+                <div class="comments__item">
                     <div class="comments__hooks">
                         <figure class="comments__hook"></figure>
                         <figure class="comments__hook"></figure>
@@ -172,17 +173,83 @@
                         <div>Jenny Harra /</div>
                         <div class="comments__company">OWW Studio</div>
                     </div>
-                </label>
+                </div>
             </form>
             <div class="comments__circles">
                 <figure class="comments__circle"></figure>
-                <figure class="comments__circle comments__circle_checked"></figure>
+                <figure class="comments__circle"></figure>
                 <figure class="comments__circle"></figure>
                 <figure class="comments__circle"></figure>
                 <figure class="comments__circle"></figure>
             </div>
         </div>
     </section>
+    <footer class="page-footer">
+        <div class="page-footer__title">WORKS WITH ANY PLATFORM</div>
+        <div class="page-footer__logos">
+            <a href="">
+                <img src="../../assets/images/batman-logo-silhouette.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/facebook-square-social-logo.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/github-logo.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/instagram-social-network-logo-of-photo-camera.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/linkedin-logo-button.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/pinterest-logotype-circle.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/twitter-bird.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/youtube-symbol.png" alt="">
+            </a>
+            <a href="">
+                <img src="../../assets/images/visa-pay-logo.png" alt="">
+            </a>
+        </div>
+        <div class="page-footer__rights">© 2018 autocryp All Right Reserved</div>
+        <nav class="page-footer__nav">
+            <div class="page-footer__menu-item">
+                <a class="page-footer__link" href="">
+                    <span class="page-footer__link-title">
+                        Benefit
+                    </span>
+                </a>
+            </div>
+            <div class="page-footer__menu-item">/</div>
+            <div class="page-footer__menu-item">
+                <a class="page-footer__link" href="">
+                    <span class="page-footer__link-title">
+                        Pricing
+                    </span>
+                </a>
+            </div>
+            <div class="page-footer__menu-item">/</div>
+            <div class="page-footer__menu-item">
+                <a class="page-footer__link" href="">
+                    <span class="page-footer__link-title">
+                        Testimonials
+                    </span>
+                </a>
+            </div>
+            <div class="page-footer__menu-item">/</div>
+            <div class="page-footer__menu-item">
+                <a class="page-footer__link" href="">
+                    <span class="page-footer__link-title">
+                        Clients
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </footer>
 </div>
 </body>
 </html>

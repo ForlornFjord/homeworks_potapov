@@ -2,10 +2,13 @@
 @import "mixins";
 
 .rates {
-  margin-top: 400px;
+  //margin-top: 200px;
   @include flexCenterVertical;
   flex-direction: column;
   &__header {
+    @include mobile {
+      font-size: $mobile-font-size*2.5;
+    }
     font-size: $base-font-size*2.5;
     color: #32325c;
     line-height: 1.6;
@@ -18,6 +21,7 @@
       justify-content: center;
       height: 100%;
       cursor: pointer;
+      letter-spacing: 2px;
     }
     margin-top: 60px;
     display: flex;
@@ -38,6 +42,10 @@
     width: 308px;
   }
   &__options {
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     margin-top: 64px;
     display: flex;
     justify-content: space-between;
@@ -73,6 +81,7 @@
     text-align: center;
   }
   &__btn {
+    letter-spacing: 1px;
     margin-top: 59px;
     font-size: $base-font-size;
     padding: $base-font-size*1.3125 $base-font-size*3.375;

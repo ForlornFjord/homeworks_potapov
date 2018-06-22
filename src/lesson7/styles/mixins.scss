@@ -49,12 +49,6 @@ $xl-screen: 1920px;
   }
 }
 
-@mixin desktop-lg {
-  @media (min-width: #{$xl-screen - 0.1px}) {
-    @content;
-  }
-}
-
 @mixin pageContainer {
   max-width: 1257px;
   margin: 0 auto;

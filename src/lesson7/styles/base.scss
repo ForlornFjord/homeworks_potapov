@@ -23,7 +23,6 @@ body, ol, ul, h1, h2, h3, h4, h5, hr, p, figure {
 }
 
 a {
-  color: $btn-default-font-color;
   text-decoration: none;
 }
 
@@ -33,4 +32,8 @@ li {
 
 input {
   display: none;
+}
+
+.page-wrapper {
+  //min-width: 1440px;
 }
