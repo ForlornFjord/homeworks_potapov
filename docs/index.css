@@ -1,0 +1,11 @@
+body {
+  background-color: #f9be3e;
+  padding: 100px; }
+
+.grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
