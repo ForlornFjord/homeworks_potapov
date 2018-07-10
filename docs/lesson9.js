@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 329);
+/******/ 	return __webpack_require__(__webpack_require__.s = 353);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9036,24 +9036,140 @@ module.exports = function (regExp, replace) {
 /***/ }),
 /* 327 */,
 /* 328 */,
-/* 329 */
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(330);
+module.exports = __webpack_require__(354);
 
 
 /***/ }),
-/* 330 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(331);
+__webpack_require__(355);
+
+var _lighter = __webpack_require__(356);
+
+var lighterElement1 = document.querySelector('#lighter1');
+var lighterElement2 = document.querySelector('#lighter2');
+
+(0, _lighter.lighter)(lighterElement1);
+(0, _lighter.lighter)(lighterElement2);
+
+//
+// const user = {
+//     age: '23',
+//     name: 'Stas',
+//     surname: 'Potapov',
+// };
+//
+// alert('Hello, I am '+user.age+' years old. My name is '+user.name+' '+user.surname+'.');
+//
+// for (let i = 0; i <= 100; i++) {
+//   console.log(i);
+// }
+//
+// const name = prompt('Enter your name', '');
+//
+// if (name === 'admin') {
+//     console.log('Hello master');
+// } else {
+//     console.log('Hello user');
+// }
+
+// const someBtn = document.querySelector('.btn');
+// console.dir(someBtn);
+// function greet() {
+//     const name = prompt('Hello world');
+//     someBtn.classList.add('btn_touched');
+//     alert(`Hello, ${name} !`);
+// }
+// someBtn.addEventListener('click', greet);
+//
+// const secondBtn = document.querySelector('.btn2');
+// function test2() {
+//     alert('Here comes da boi');
+// }
+// secondBtn.addEventListener('click', test2);
 
 /***/ }),
-/* 331 */
+/* 355 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 356 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.lighter = lighter;
+
+__webpack_require__(357);
+
+function lighter(lighterElement) {
+    var lights = lighterElement.querySelectorAll('.street-lighter__light');
+
+    function switchOff() {
+        for (var i = 0; i < lights.length; i++) {
+            lights[i].classList.remove('street-lighter__light_active');
+        }
+    }
+    function switchOn(element) {
+        element.classList.add('street-lighter__light_active');
+    }
+
+    function clickHandler(element) {
+        switchOff();
+        switchOn(element);
+    }
+
+    var _loop = function _loop(i) {
+        lights[i].addEventListener('click', function () {
+            clickHandler(lights[i]);
+        });
+    };
+
+    for (var i = 0; i < lights.length; i++) {
+        _loop(i);
+    }
+}
+
+/***/ }),
+/* 357 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

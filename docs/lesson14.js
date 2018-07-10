@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 329);
+/******/ 	return __webpack_require__(__webpack_require__.s = 348);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9036,24 +9036,152 @@ module.exports = function (regExp, replace) {
 /***/ }),
 /* 327 */,
 /* 328 */,
-/* 329 */
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(330);
+module.exports = __webpack_require__(349);
 
 
 /***/ }),
-/* 330 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(331);
+__webpack_require__(350);
+
+var _accordion = __webpack_require__(351);
+
+var dataForAccordion = [{
+    title: 'Some Accordion # ',
+    text: 'Воооу, на аккордеоне'
+}, {
+    title: 'Dope Accordion # ',
+    text: 'В подземном переходе...'
+}, {
+    title: 'Thicc Accordion # ',
+    text: 'Мы исполняем...'
+}];
+
+var theAccordion = new _accordion.Accordion(document.querySelector('#accordion1'), dataForAccordion);
 
 /***/ }),
-/* 331 */
+/* 350 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 351 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Accordion = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(352);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ACCORDION_CLASS_NAME = 'accordion';
+var ACCORDION_OPTIONS_CLASS_NAME = ACCORDION_CLASS_NAME + '__options';
+var ACCORDION_OPTION_CLASS_NAME = ACCORDION_CLASS_NAME + '__option';
+var ACCORDION_CONTROL_CLASS_NAME = ACCORDION_CLASS_NAME + '__control';
+var ACCORDION_TEXT_CLASS_NAME = ACCORDION_CLASS_NAME + '__text';
+var ACCORDION_EXPAND_CLASS_NAME = ACCORDION_CLASS_NAME + '_expand';
+
+var Accordion = exports.Accordion = function () {
+    function Accordion(target, options) {
+        _classCallCheck(this, Accordion);
+
+        this.target = target;
+        this.options = options;
+        this.render();
+        this.renderList();
+    }
+
+    _createClass(Accordion, [{
+        key: 'render',
+        value: function render() {
+            this.list = document.createElement('ul');
+
+            this.list.classList.add(ACCORDION_OPTIONS_CLASS_NAME);
+            this.target.classList.add(ACCORDION_CLASS_NAME);
+
+            this.target.appendChild(this.list);
+        }
+    }, {
+        key: 'renderList',
+        value: function renderList() {
+            var _this = this;
+
+            this.options.forEach(function (option, index) {
+                console.log(option);
+
+                var li = document.createElement('li');
+                var button = document.createElement('button');
+                var div = document.createElement('div');
+                var p = document.createElement('p');
+
+                li.classList.add(ACCORDION_OPTION_CLASS_NAME);
+                button.classList.add(ACCORDION_CONTROL_CLASS_NAME);
+                div.classList.add(ACCORDION_TEXT_CLASS_NAME);
+
+                var trueIndex = index + 1;
+                button.textContent = option.title + trueIndex;
+                p.textContent = option.text;
+
+                _this.list.appendChild(li);
+                li.appendChild(button);
+                li.appendChild(div);
+                div.appendChild(p);
+
+                button.addEventListener('click', function () {
+                    this.classList.toggle(ACCORDION_EXPAND_CLASS_NAME);
+
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        }
+    }]);
+
+    return Accordion;
+}();
+
+/***/ }),
+/* 352 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

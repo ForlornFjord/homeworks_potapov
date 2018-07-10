@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 329);
+/******/ 	return __webpack_require__(__webpack_require__.s = 338);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9036,24 +9036,134 @@ module.exports = function (regExp, replace) {
 /***/ }),
 /* 327 */,
 /* 328 */,
-/* 329 */
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(330);
+module.exports = __webpack_require__(339);
 
 
 /***/ }),
-/* 330 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(331);
+__webpack_require__(340);
+
+// Task #2
+var user = {};
+user.name = 'Vasya';
+console.log(user.name);
+user.surname = 'Petrov';
+user.name = 'Sergey';
+console.log(user.name);
+delete user.name;
+console.log(user.name);
+
+// Task #3
+function isEmpty(obj) {
+    for (var key in obj) {
+        return false;
+    }
+    return true;
+}
+var admin = {};
+console.log(isEmpty(user));
+console.log(isEmpty(admin));
+
+// Task #4
+var salaries = {
+    John: 400,
+    Jack: 200,
+    Stan: 500,
+    Alex: 100,
+    test: 'asdasdsa'
+};
+
+var sum = 0;
+for (var key in salaries) {
+    if (typeof salaries[key] === "number") {
+        sum = sum + salaries[key];
+    }
+}
+console.log(sum);
+
+// Task #5
+var max = 0;
+
+for (var _key in salaries) {
+    if (typeof salaries[_key] === "number" && salaries[_key] > max) {
+        max = salaries[_key];
+    }
+}
+
+if (max === 0) {
+    max = 'нет сотрудников';
+}
+
+console.log(max);
+
+// Task #6
+var numbers = {
+    asd: 2,
+    sasd: 'asd',
+    asdf: 3,
+    faw: 4
+};
+
+function multiplyNumeric(obj) {
+    for (var keyy in obj) {
+        if (typeof obj[keyy] === "number") {
+            obj[keyy] = obj[keyy] * 2;
+        }
+    }
+    console.log(numbers);
+}
+
+multiplyNumeric(numbers);
+
+// Task #8
+function arraySum() {}
+
+//
+var products = [{
+    title: 'Test',
+    price: '87hjk'
+}, {
+    title: 'Test',
+    price: '2500'
+}, {
+    title: 'Test',
+    price: '2500'
+}];
+
+function calcTotal(arrayOfNumbers) {
+    var total = 0;
+    for (var i = 0; i < arrayOfNumbers.length; i++) {
+        var string = Number(arrayOfNumbers[i].price);
+        if (isNaN(string) !== true) {
+            total = total + string;
+        }
+    }
+    return total;
+}
+
+var totalPrice = calcTotal(products);
+console.log(totalPrice);
 
 /***/ }),
-/* 331 */
+/* 340 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
